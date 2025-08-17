@@ -1,8 +1,8 @@
 import "./globals.css";
-import { Nunito } from 'next/font/google'
 import Navbar from '@/Components/Navbar/Navbar'
+import { chillaxRegular } from "./fonts";
+import Footer from "@/Components/Footer/Footer";
 
-const nunitoFont = Nunito({ subsets: ['latin'], weight: ['400', '700']})
 
 export const metadata = {
     title: "tommu's portfolio",
@@ -11,12 +11,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   	return (
-    	<html lang="en">
-			<body className={`${nunitoFont.className}`}>
+    	<html lang="en" className={chillaxRegular.className}>
+			<body>
 				<Navbar />
 				<main>
 					{children}
 				</main>
+				<Footer />
 			</body>
     	</html>
   	);

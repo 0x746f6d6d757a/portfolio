@@ -1,11 +1,66 @@
-// app/page.js
+import './styles/homePage.css'
+import { chillaxBold } from './fonts';
+import { FaNodeJs, FaPython, FaJava } from 'react-icons/fa'
+import { SiGnubash } from "react-icons/si";
+import Link from 'next/link';
+
 export default function Home() {
-  return (
-    <div className="space-y-6">
-      <h1 className="text-4xl font-bold">Hi, I'm Alice</h1>
-      <p className="text-lg">
-        Welcome to my portfolio! I’m a developer passionate about building modern and beautiful websites.
-      </p>
-    </div>
-  );
+    return (
+		<div className="homepage_container">
+
+			<div className={`name_container ${chillaxBold.className}`}>
+				<div className='name'>tommu</div>
+				<div className='profile_picture'></div>
+			</div>
+
+			<div className={`description_container`}>
+
+				<div className={`pharagrap_title`}>Who am I?</div>
+				<div className={`pharagrap_text`}>
+					Hello there, I'm tommu! <p className='line_break' />
+					I'm a young developer who use <code className={`prog_language`}>nodejs</code> to develop most of my projects. <p className='line_break' />
+					I've started at the age of 11 to develop discord bot with <code className={`prog_language`}>discord.js</code> and then enojed to program things on my free time.
+					In recent years I've been really interested in <code className={`prog_language`}>Software Developing</code> and this year I'll start a school that will teach me everything that i need to know. <p className='line_break' />
+				</div>
+
+				<div className={`pharagrap_title`}>Programming Languages</div>
+				<div className={`pharagrap_text`}>
+					I've learned many programming languages during these past years and here all of them! <p className='line_break' />
+
+					<div className='list_container'>
+						<div className='prog_container'>
+							<FaNodeJs className='prog_icon' /> 
+							<p className='prog_name'>NodeJS</p>
+						</div>
+
+						<div className='prog_container'>
+							<FaPython className='prog_icon' />
+							<p className='prog_name'>Python</p>
+						</div>
+
+						<div className='prog_container'>
+							<SiGnubash className='prog_icon' />
+							<p className='prog_name'>Bash</p>
+						</div>
+					</div>
+
+				</div>
+
+
+				<div className={`pharagrap_title`}>Resumee</div>
+				<div className={`pharagrap_text`}>
+					If you are interested about my projects and work you can get all my information inside my curriculum! <p className='line_break' />
+					<Link className='download_btn' href={'/files/curriculum.pdf'} download={true}>DOWNLOAD MY RESUMEE</Link>
+
+
+				</div>
+
+
+
+			</div>
+
+
+
+    	</div>
+    );
 }

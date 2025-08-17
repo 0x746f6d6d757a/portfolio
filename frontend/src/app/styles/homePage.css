@@ -1,0 +1,70 @@
+.homepage_container {
+    width: 100%;
+}
+
+.name_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/profile_picture.png');
+    padding: 0.8rem 0;
+}
+
+.name {
+    font-size: 4rem;
+}
+
+.description_container {
+    justify-content: center;
+    text-align: left;
+    margin-right: 20vw;
+    margin-left: 20vw;
+    text-align: center;
+}
+
+.pharagrap_title {
+    font-size: 2.5rem;
+    padding: 2rem 0;
+}
+
+.pharagrap_text {
+    font-size: 1.2rem;
+}
+
+
+
+
+.line_break {
+    white-space: pre-wrap;
+}
+
+.list_container {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.prog_container {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding: 1.5vh 0;
+}
+
+.prog_icon {
+    font-size: 3rem;
+}
+
+.prog_name {
+    font-size: 2rem;
+}
+
+.download_btn {
+    border: 1px solid whitesmoke;
+    padding: 1rem 2rem;
+    display: inline-block;
+    margin-top: 2vh;
+    border-radius: 25px;
+    
+    
+}

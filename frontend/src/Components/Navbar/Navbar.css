@@ -1,132 +1,40 @@
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #4050cc;
-    position: relative;
-}
+.navbar_container {
+    width: 100%;
 
-.logo_container {
-    width: 40%;
-}
-
-.logo {
-    max-width: 100%;
-    height: 3.5vw;
 }
 
 .buttons_container {
-    color: #0a0a0a;
-    width: 60%;
     display: flex;
-    justify-content: flex-end;
-    gap: 0.2rem;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3vh 0;
+
 }
 
 .button {
-    text-decoration: none;
     font-size: 1.2rem;
-    font-weight: bold;
-    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    padding: 1.2rem 0.8rem;
+    border-radius: 25px;
+    transition: text-decoration 0.4s;
+    position: relative;
+    text-decoration: none;
+    color: whitesmoke;
 }
 
-
-.toggle_menu {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
+.button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    width: 100%;
+    height: 0.15rem;
+    background-color: whitesmoke;
+    transform: scaleX(0);          
+    transform-origin: center;
+    transition: transform 0.3s ease;
 }
 
-/* Tablet Style */
-@media (min-width: 790) and (max-width: 900) {
-
-    .logo_container {
-        width: 20%;
-    }
-
-    .logo {
-        max-width: 100%;
-        height: 2rem;
-    }
-
-    .toggle_menu {
-        display: none; /* show hamburger */
-    }
-
-    .buttons_container {
-        top: 100%;
-        left: 0;
-        width: 75%;
-        flex-direction: row;
-        gap: 0.2rem;
-        display: none; /* hidden by default */
-    }
-
-    .buttons_container {
-        color: #0a0a0a;
-        width: 75%;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .button {
-        font-size: 1rem;
-        font-weight: bold;
-        padding: 0.5rem 1.5rem;
-        text-align: center;
-    }
-
-}
-
-/* Phone Style */
-@media (max-width: 789) {
-
-    .toggle_menu {
-        display: block; 
-    }
-
-    .buttons_container {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background-color: #4050cc;
-        display: none; 
-    }
-
-    .buttons_container.open {
-        display: flex;
-        width: 100%;
-    }
-
-    .button {
-        padding: 0.8rem;
-        font-size: 1.2rem;
-        text-align: center;
-    }
-
-
-    .buttons_container .button:nth-child(even) {
-        background-color: #4050cc;
-        padding: 0.8rem;
-        color: white;
-    }
-
-    .buttons_container .button:nth-child(odd) {
-        background-color: #2f3a99;
-        color: white;
-    }
-
-    .logo_container {
-        width: 80%;
-    }
-
-    .logo {
-        height: 3.5vh;
-    }
+.button:hover::after {
+    transform: scaleX(1);
 }

@@ -24,7 +24,7 @@
 
 .pharagrap_title {
     font-size: 2.5rem;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
 }
 
 .pharagrap_text {
@@ -38,17 +38,63 @@
     white-space: pre-wrap;
 }
 
+
+
 .list_container {
-    display: flex;
     justify-content: center;
+    display: flex;
     gap: 5rem;
+    overflow: hidden;
+}
+
+
+.carousel {
+  overflow: hidden;
+  width: 60%; /* adjust */
+  margin: 0 auto;
+}
+
+.carousel_track {
+  display: flex;
+  width: max-content;
+  animation: scroll 15s linear infinite;
 }
 
 .prog_container {
-    display: flex;
-    align-items: center;
-    gap: 1vw;
-    padding: 1.5vh 0;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5vh 2vw;
+}
+
+.prog_icon {
+  font-size: 3rem;
+}
+
+.prog_name {
+  font-size: 2rem;
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* shift by half since we duplicated */
+  }
+}
+
+
+
+
+.prog_icon {
+  font-size: 3rem;
+}
+
+.prog_name {
+  font-size: 2rem;
 }
 
 .prog_icon {

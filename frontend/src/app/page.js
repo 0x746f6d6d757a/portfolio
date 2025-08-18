@@ -1,10 +1,20 @@
 import './styles/homePage.css'
 import { chillaxBold } from './fonts';
-import { FaNodeJs, FaPython, FaJava } from 'react-icons/fa'
-import { SiGnubash } from "react-icons/si";
+import { FaNodeJs, FaPython, FaJava,  } from 'react-icons/fa'
+import { SiGnubash, SiMysql } from "react-icons/si";
 import Link from 'next/link';
 
+const languages = [
+	{ name: "NodeJS", 	icon: <FaNodeJs className="prog_icon" /> },
+	{ name: "Python", 	icon: <FaPython className="prog_icon" /> },
+	{ name: "Java", 	icon: <FaJava className="prog_icon" /> },
+	{ name: "Bash", 	icon: <SiGnubash className="prog_icon" /> },
+	{ name: "MySQL", 	icon: <SiMysql className="prog_icon" /> },
+]
+
+
 export default function Home() {
+
     return (
 		<div className="homepage_container">
 
@@ -27,24 +37,17 @@ export default function Home() {
 				<div className={`pharagrap_text`}>
 					I've learned many programming languages during these past years and here all of them! <p className='line_break' />
 
-					<div className='list_container'>
-						<div className='prog_container'>
-							<FaNodeJs className='prog_icon' /> 
-							<p className='prog_name'>NodeJS</p>
-						</div>
-
-						<div className='prog_container'>
-							<FaPython className='prog_icon' />
-							<p className='prog_name'>Python</p>
-						</div>
-
-						<div className='prog_container'>
-							<SiGnubash className='prog_icon' />
-							<p className='prog_name'>Bash</p>
+					<div className="carousel">
+						<div className="carousel_track">
+							{languages.map((language, i) => (
+								<div key={i} className="prog_container"> {language.icon} <p className="prog_name">{language.name}</p> </div>
+						))}
+						{languages.map((language, i) => (
+							<div key={`dup-${i}`} className="prog_container"> {language.icon} <p className="prog_name">{language.name}</p> </div>
+						))}
 						</div>
 					</div>
-
-				</div>
+					</div>
 
 
 				<div className={`pharagrap_title`}>Resumee</div>
@@ -55,11 +58,7 @@ export default function Home() {
 
 				</div>
 
-
-
 			</div>
-
-
 
     	</div>
     );

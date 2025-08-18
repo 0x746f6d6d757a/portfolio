@@ -7,12 +7,12 @@
     display: flex;
     justify-content: center;
     gap: 3rem;
-    padding: 3vh 0;
+    padding: 1.5vh 0;
 
 }
 
 .button {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     padding: 1.2rem 0.8rem;
     border-radius: 25px;

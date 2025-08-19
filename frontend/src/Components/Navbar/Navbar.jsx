@@ -2,16 +2,13 @@
 import Link from 'next/link';
 import './Navbar.css'
 import { chillaxSemibold } from '@/app/fonts';
+import { navbarData } from './navbarData.js';
 
 export default function Navbar() {
     return (
         <div className='navbar_container'>
             <div className={`buttons_container ${chillaxSemibold.className}`}>
-                <Link className='button' href={'/'}>HOME</Link>
-                <Link className='button' href={'/contacts'}>CONTACTS</Link>
-                <Link className='button' href={'/projects'}>PROJECTS</Link>
-                <Link className='button' href={'/socials'}>SOCIAL</Link>
-                <Link className='button' href={'/about'}>ABOUT</Link>
+                { navbarData.map((button, index) => ( <Link key={index} className={button.className} href={button.path}> {button.title} </Link> ))}
             </div>
         </div>
     );

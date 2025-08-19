@@ -1,56 +1,6 @@
-.homepage_container {
-    width: 100%;
-}
-
-.name_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('/images/profile_picture.png');
-    padding: 0.8rem 0;
-}
-
-.name {
-    font-size: 4rem;
-}
-
-.description_container {
-    justify-content: center;
-    text-align: left;
-    margin-right: 20vw;
-    margin-left: 20vw;
-    text-align: center;
-}
-
-.pharagrap_title {
-    font-size: 2.5rem;
-    padding: 1.5rem 0;
-}
-
-.pharagrap_text {
-    font-size: 1.2rem;
-}
-
-
-
-
-.line_break {
-    white-space: pre-wrap;
-}
-
-
-
-.list_container {
-    justify-content: center;
-    display: flex;
-    gap: 5rem;
-    overflow: hidden;
-}
-
-
-.carousel {
+.programming_carousel {
   overflow: hidden;
-  width: 60%; /* adjust */
+  width: 60%; 
   margin: 0 auto;
 }
 
@@ -60,7 +10,7 @@
   animation: scroll 15s linear infinite;
 }
 
-.prog_container {
+.programming_container {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
@@ -68,41 +18,22 @@
   padding: 1.5vh 2vw;
 }
 
-.prog_icon {
+.programming_icon {
   font-size: 3rem;
 }
 
-.prog_name {
+.programming_name {
   font-size: 2rem;
 }
 
-/* Keyframes for continuous scrolling */
+
 @keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%); /* shift by half since we duplicated */
-  }
-}
-
-
-
-
-.prog_icon {
-  font-size: 3rem;
-}
-
-.prog_name {
-  font-size: 2rem;
-}
-
-.prog_icon {
-    font-size: 3rem;
-}
-
-.prog_name {
-    font-size: 2rem;
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .download_btn {
@@ -111,6 +42,4 @@
     display: inline-block;
     margin-top: 2vh;
     border-radius: 25px;
-    
-    
 }

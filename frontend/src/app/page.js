@@ -5,11 +5,11 @@ import { SiGnubash, SiMysql } from "react-icons/si";
 import Link from 'next/link';
 
 const languages = [
-	{ name: "NodeJS", 	icon: <FaNodeJs className="prog_icon" /> },
-	{ name: "Python", 	icon: <FaPython className="prog_icon" /> },
-	{ name: "Java", 	icon: <FaJava className="prog_icon" /> },
-	{ name: "Bash", 	icon: <SiGnubash className="prog_icon" /> },
-	{ name: "MySQL", 	icon: <SiMysql className="prog_icon" /> },
+	{ name: "NodeJS", 	icon: <FaNodeJs className="programming_icon" /> },
+	{ name: "Python", 	icon: <FaPython className="programming_icon" /> },
+	{ name: "Java", 	icon: <FaJava className="programming_icon" /> },
+	{ name: "Bash", 	icon: <SiGnubash className="programming_icon" /> },
+	{ name: "MySQL", 	icon: <SiMysql className="programming_icon" /> },
 ]
 
 
@@ -37,14 +37,15 @@ export default function Home() {
 				<div className={`pharagrap_text`}>
 					I've learned many programming languages during these past years and here all of them! <p className='line_break' />
 
-					<div className="carousel">
+					<div className="programming_carousel">
 						<div className="carousel_track">
 							{languages.map((language, i) => (
-								<div key={i} className="prog_container"> {language.icon} <p className="prog_name">{language.name}</p> </div>
-						))}
-						{languages.map((language, i) => (
-							<div key={`dup-${i}`} className="prog_container"> {language.icon} <p className="prog_name">{language.name}</p> </div>
-						))}
+								<div key={i} className="programming_container"> {language.icon} <p className="programming_name">{language.name}</p> </div>
+						    ))}
+
+                            {languages.map((language, i) => (
+                                <div key={`dup-${i}`} className="programming_container"> {language.icon} <p className="programming_name">{language.name}</p> </div>
+                            ))}
 						</div>
 					</div>
 					</div>

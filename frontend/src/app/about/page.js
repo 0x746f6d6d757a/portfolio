@@ -1,8 +1,21 @@
-// app/about/page.js
+import { chillaxBold } from "../fonts";
+
 export default function About() {
-  return (
-    <div className="space-y-4">
-      <h1 className="text-3xl font-semibold">About Me</h1>
-    </div>
-  );
+	return (
+		<div className="homepage_container">
+
+			<div className={`name_container ${chillaxBold.className}`}>
+				<div className='name'>ABOUT</div>
+				<div className='profile_picture'></div>
+			</div>
+
+			<div className={`description_container`}>
+
+
+			</div>
+
+		</div>
+	);
 }
+
+

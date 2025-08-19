@@ -21,3 +21,41 @@ body {
     background: var(--background);
     color: var(--foreground);
 }
+
+.homepage_container {
+    width: 100%;
+}
+
+.name_container {
+    background-image: url('/images/profile_picture.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 0;
+}
+
+.name {
+    font-size: 4rem;
+}
+
+.description_container {
+    justify-content: center;
+    text-align: left;
+    margin-right: 20vw;
+    margin-left: 20vw;
+    text-align: center;
+}
+
+.pharagrap_title {
+    font-size: 2.5rem;
+    padding: 1.5rem 0;
+}
+
+.pharagrap_text {
+    font-size: 1.2rem;
+}
+
+.line_break {
+    white-space: pre-wrap;
+}
+

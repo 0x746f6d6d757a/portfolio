@@ -1,9 +1,20 @@
-// app/about/page.js
+import { chillaxBold } from "../fonts";
+
 export default function Projects() {
-  return (
-    <div className="space-y-4">
-      <h1 className="text-3xl font-semibold">Projects Me</h1>
-      <p>I’m a developer with experience in React, Next.js, and modern web technologies.</p>
-    </div>
-  );
+	return (
+		<div className="homepage_container">
+
+			<div className={`name_container ${chillaxBold.className}`}>
+				<div className='name'>PROJECTS</div>
+				<div className='profile_picture'></div>
+			</div>
+
+			<div className={`description_container`}>
+
+
+			</div>
+
+		</div>
+	);
 }
+
